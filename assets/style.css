@@ -110,3 +110,14 @@ figure {
     display: flex;
     flex-direction: column;
 }
+
+footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 341px;
+}
+
+footer {
+    background-color: rgba(129, 111, 148, 0.082);
+}
