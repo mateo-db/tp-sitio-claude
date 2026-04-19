@@ -1,0 +1,12 @@
+# Trabajo Práctico: "Desarrollo colaborativo de un sitio web con Git y GitHub"
+**Materia:** Taller de Lenguaje de Programación
+**Año:** 2026
+## Integrantes
+- Cabezas Mateo
+- Berger Santiago
+- Acosta Pía
+- Soria Máximiliano
+## Descripción
+Sitio web informativo sobre la inteligencia artificial Claude desarrollada por la compañía Anthropic.
+## Distribución de tareas
+- Cabezas Mateo: Código base con index.html, carpeta assets y archivo style.css, estructura semántica del index.html (header, nav, main y footer), diseño del header, navbar, body y footer con CSS para la página "Inicio".
