@@ -1,0 +1,569 @@
+/* ============================================
+   CLAUDE IA — Página de Comparación
+   style-comparacion.css
+   Maximiliano Eligio Soria
+   ============================================ */
+
+/* --- Variables de color --- */
+:root {
+    --color-fondo: #f5f7fa;
+    --color-claude: #c17f3e;
+    --color-claude-suave: #fff3e0;
+    --color-gpt: #10a37f;
+    --color-gpt-suave: #e6f7f3;
+    --color-primario: #1a1a2e;
+    --color-secundario: #4a4a6a;
+    --color-borde: #dde1ea;
+    --color-blanco: #ffffff;
+    --sombra: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --radio: 10px;
+}
+
+/* --- Reset básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    line-height: 1.7;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.encabezado-gral {
+    background-color: var(--color-primario);
+    padding: 1.2rem 2rem;
+}
+
+.encabezado-gral header {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.encabezado-gral h1 {
+    color: var(--color-claude);
+    font-size: 1.6rem;
+}
+
+.encabezado-gral h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-claude);
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3.5rem;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--color-claude);
+    display: inline-block;
+}
+
+section p {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* ============================================
+   SECCIÓN INTRO
+   ============================================ */
+.section-intro {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: var(--radio);
+    border-left: 5px solid var(--color-claude);
+    box-shadow: var(--sombra);
+}
+
+.section-intro h2 {
+    border-bottom: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   EVOLUCIÓN — CSS GRID
+   ============================================ */
+.evolucion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.evolucion-card {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+    padding: 1.25rem;
+    border-top: 4px solid var(--color-borde);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.evolucion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.evolucion-card.evolucion-destacado {
+    border-top-color: var(--color-claude);
+    background-color: var(--color-claude-suave);
+}
+
+.evolucion-version {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.evolucion-fecha {
+    font-size: 0.8rem;
+    color: var(--color-claude);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.evolucion-card p {
+    font-size: 0.88rem;
+    color: var(--color-secundario);
+    margin: 0;
+}
+
+/* ============================================
+   TABLA COMPARATIVA
+   ============================================ */
+.tabla-wrapper {
+    overflow-x: auto;
+}
+
+.tabla-comparacion {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.tabla-comparacion thead {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.tabla-comparacion thead th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.tabla-comparacion thead th:nth-child(2) {
+    color: var(--color-claude);
+}
+
+.tabla-comparacion thead th:nth-child(3) {
+    color: var(--color-gpt);
+}
+
+.tabla-comparacion tbody tr {
+    border-bottom: 1px solid var(--color-borde);
+    transition: background-color 0.2s, transform 0.15s;
+    cursor: pointer;
+}
+
+.tabla-comparacion tbody tr:hover {
+    background-color: var(--color-claude-suave);
+    transform: scale(1.01);
+}
+
+.tabla-comparacion tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-comparacion tbody td {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.92rem;
+    color: var(--color-secundario);
+}
+
+.tabla-comparacion tbody td:first-child {
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+/* ============================================
+   PUNTOS FUERTES — FLEXBOX
+   ============================================ */
+.tarjetas-flex {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.tarjeta {
+    flex: 1;
+    border-radius: var(--radio);
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.tarjeta ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tarjeta ul li {
+    font-size: 0.92rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.tarjeta ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.tarjeta-claude {
+    background-color: var(--color-claude-suave);
+    border-top: 4px solid var(--color-claude);
+}
+
+.tarjeta-claude h3 {
+    color: var(--color-claude);
+    border-bottom: 2px solid var(--color-claude);
+}
+
+.tarjeta-claude ul li {
+    color: #5a3a10;
+}
+
+.tarjeta-claude ul li::before {
+    color: var(--color-claude);
+}
+
+.tarjeta-chatgpt {
+    background-color: var(--color-gpt-suave);
+    border-top: 4px solid var(--color-gpt);
+}
+
+.tarjeta-chatgpt h3 {
+    color: var(--color-gpt);
+    border-bottom: 2px solid var(--color-gpt);
+}
+
+.tarjeta-chatgpt ul li {
+    color: #0a3d2e;
+}
+
+.tarjeta-chatgpt ul li::before {
+    color: var(--color-gpt);
+}
+
+/* ============================================
+   MODELOS ACTUALES — CSS GRID
+   ============================================ */
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modelo-card {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+    padding: 1.25rem;
+    box-shadow: var(--sombra);
+    border-bottom: 4px solid var(--color-borde);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.modelo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.modelo-card h3 {
+    font-size: 1.05rem;
+    color: var(--color-primario);
+    margin: 0.3rem 0 0.5rem;
+}
+
+.modelo-card p {
+    font-size: 0.88rem;
+    color: var(--color-secundario);
+    margin: 0;
+}
+
+.modelo-empresa {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.modelo-claude {
+    border-bottom-color: var(--color-claude);
+}
+
+.modelo-claude .modelo-empresa {
+    background-color: var(--color-claude-suave);
+    color: var(--color-claude);
+}
+
+.modelo-gpt {
+    border-bottom-color: var(--color-gpt);
+}
+
+.modelo-gpt .modelo-empresa {
+    background-color: var(--color-gpt-suave);
+    color: var(--color-gpt);
+}
+
+/* ============================================
+   CONCLUSIÓN
+   ============================================ */
+.section-conclusion {
+    background-color: var(--color-primario);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 2.5rem;
+    border-radius: var(--radio);
+}
+
+.section-conclusion h2 {
+    color: var(--color-claude);
+    border-bottom-color: var(--color-claude);
+}
+
+.section-conclusion p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.fuentes {
+    margin-top: 1.5rem;
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.fuentes a {
+    color: var(--color-claude);
+    text-decoration: none;
+}
+
+.fuentes a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-primario);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+/* css integrante 1 */
+
+body {
+    background-color: rgba(255, 247, 232, 0.699);
+    margin: 0;
+}
+
+header {
+    background-color: rgba(12, 12, 12, 0.89);
+    width: 100%;
+}
+
+.navbar ul {
+    background-color: rgba(110, 106, 104, 0.158);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-top: 0;
+}
+
+.encabezado-gral nav ul {
+    display: flex;
+    gap: 200px;
+}
+
+.container-body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.75;
+    width: auto;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.877);
+    font-weight: bold;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(187, 107, 3, 0.712);
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+    text-align: center;
+    color: rgba(185, 188, 190, 0.877);
+}
+
+.navbar a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    font-weight: 450;
+    color: rgba(54, 57, 207, 0.726);
+}
+
+.navbar a:hover {
+    color: rgba(6, 171, 221, 0.781);
+}
+
+h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+figure img {
+    width: 250px;
+    float: right;
+}
+
+figure {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-der-img {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    gap: 68px;
+    margin-top: 90px;
+    margin-right: 50px;
+}
+
+.container-seccion-claude {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-seccion-aclaracion {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-seccion-anthropic {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 341px;
+}
+
+footer {
+    background-color: rgba(129, 111, 148, 0.082);
+}
