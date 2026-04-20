@@ -10,3 +10,5 @@
 Sitio web informativo sobre la inteligencia artificial Claude desarrollada por la compañía Anthropic.
 ## Distribución de tareas
 - Cabezas Mateo: Código base con index.html, carpeta assets y archivo style.css, estructura semántica del index.html (header, nav, main y footer), diseño del header, navbar, body y footer con CSS para la página "Inicio".
+- Berger Santiago: Página historia.html con su estructura semántica (header, nav, main, footer), sección de origen con Flexbox, tabla de modelos y sección de versiones con CSS Grid, junto con su archivo historia.css.
+- Acosta Pia: Pagina funciones.html con estructura semantica (header,nav, main, footer), junto con el css para el diseño y tambien una lista de funcionalidades.
