@@ -41,6 +41,7 @@ main h2 {
   background-color: rgba(255, 207, 119, 0.699);
   padding: 16px;
   border-radius: 10px;
+   border: 1px solid black;
 }
 
 .origen-datos h3 {
@@ -58,6 +59,7 @@ main h2 {
 table {
     width: 100%;
     margin-bottom: 30px;
+    border-collapse: collapse;
 }
 
 th {
@@ -73,6 +75,10 @@ td {
     font-size: 14px;
     background-color: white;
 
+}
+
+th, td {
+    border: 1px solid black;
 }
 
 .estado {
@@ -103,4 +109,33 @@ td {
 .estado.limitado {
     color: #cc5500;
     background-color: #fff0e0;
+}
+
+/*Sección de versiones usando grid*/
+
+.seccion-versiones {
+    margin-bottom: 20px;
+}
+
+.versiones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.version-tarjeta {
+    background-color: black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.version-tarjeta h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.version-tarjeta p {
+    color: white;
+    font-size: 13px;
 }
