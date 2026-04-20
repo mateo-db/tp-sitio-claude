@@ -1,5 +1,5 @@
-/* ============================================
-   CLAUDE IA — Página de Comparación
+﻿/* ============================================
+   CLAUDE IA ÔÇö P├ígina de Comparaci├│n
    style-comparacion.css
    Maximiliano Eligio Soria
    ============================================ */
@@ -19,7 +19,7 @@
     --radio: 10px;
 }
 
-/* --- Reset básico --- */
+/* --- Reset b├ísico --- */
 * {
     margin: 0;
     padding: 0;
@@ -109,7 +109,7 @@ section p {
 }
 
 /* ============================================
-   SECCIÓN INTRO
+   SECCI├ôN INTRO
    ============================================ */
 .section-intro {
     background-color: var(--color-blanco);
@@ -126,7 +126,7 @@ section p {
 }
 
 /* ============================================
-   EVOLUCIÓN — CSS GRID
+   EVOLUCI├ôN ÔÇö CSS GRID
    ============================================ */
 .evolucion-grid {
     display: grid;
@@ -241,7 +241,7 @@ section p {
 }
 
 /* ============================================
-   PUNTOS FUERTES — FLEXBOX
+   PUNTOS FUERTES ÔÇö FLEXBOX
    ============================================ */
 .tarjetas-flex {
     display: flex;
@@ -282,7 +282,7 @@ section p {
 }
 
 .tarjeta ul li::before {
-    content: '✓';
+    content: 'Ô£ô';
     position: absolute;
     left: 0;
     font-weight: 700;
@@ -325,7 +325,7 @@ section p {
 }
 
 /* ============================================
-   MODELOS ACTUALES — CSS GRID
+   MODELOS ACTUALES ÔÇö CSS GRID
    ============================================ */
 .modelos-grid {
     display: grid;
@@ -390,7 +390,7 @@ section p {
 }
 
 /* ============================================
-   CONCLUSIÓN
+   CONCLUSI├ôN
    ============================================ */
 .section-conclusion {
     background-color: var(--color-primario);
@@ -435,7 +435,12 @@ footer {
     margin-top: 2rem;
 }
 
-/* css Unificado */
+
+
+
+
+
+/* css integrante 1 */
 
 body {
     background-color: rgba(255, 247, 232, 0.699);
