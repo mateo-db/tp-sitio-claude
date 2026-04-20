@@ -52,3 +52,55 @@ main h2 {
   font-size: 14px;
   margin-bottom: 6px;
 }
+
+/*Estilos de la tabla de modelos*/
+
+table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #000000;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+}
+
+td {
+    padding: 9px 10px;
+    font-size: 14px;
+    background-color: white;
+
+}
+
+.estado {
+    font-weight: bold;
+    text-align: center;
+}
+
+.estado.activo {
+    color: #2d6a2d;
+    background-color: #eafaea;
+}
+
+.estado.interrumpido {
+    color: #8b2500;
+    background-color: #fdecea;
+}
+
+.estado.obsoleto {
+    color: #7a5500;
+    background-color: #fff8e1;
+}
+
+.estado.jubilado {
+    color: #5c3d7a;
+    background-color: #f3eefa;
+}
+
+.estado.limitado {
+    color: #cc5500;
+    background-color: #fff0e0;
+}
