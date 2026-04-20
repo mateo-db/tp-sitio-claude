@@ -1,0 +1,54 @@
+/*Estilos del main*/
+
+main {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 247, 232, 0.699);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main h2 {
+  color: #000000;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/*Sección de origen usando flexbox*/
+
+.seccion-origen {
+  margin-bottom: 30px;
+}
+
+.origen-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.origen-texto {
+  flex: 2;
+}
+
+.origen-texto p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.origen-datos {
+  background-color: rgba(255, 207, 119, 0.699);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.origen-datos h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.origen-datos p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
